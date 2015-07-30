@@ -15,32 +15,31 @@
 	"dependencies": {
 		"request": "*"
 	},
-	"interfaces": {
-		"speech": {
-			"triggers": [
-				{
-					"id": "chuck",
-					"importance": 0.5,
-					"synonyms": {
-						"en": [ "chuck" ]
-					}
-				},
-				{
-					"id": "norris",
-					"importance": 0.5,
-					"synonyms": {
-						"en": [ "norris" ]
-					}
-				},
-				{
-					"id": "joke",
-					"importance": 0.25,
-					"synonyms": {
-						"en": [ "joke" ],
-						"nl": [ "grap", "grapje", "mop", "mopje" ]
-					}
-				}
-			]
+	"permissions": [
+		"homey:manager:speech-output"
+	],
+	"speech": [
+		{
+			"id": "chuck",
+			"importance": 0.5,
+			"synonyms": {
+				"en": [ "chuck" ]
+			}
+		},
+		{
+			"id": "norris",
+			"importance": 0.5,
+			"synonyms": {
+				"en": [ "norris" ]
+			}
+		},
+		{
+			"id": "joke",
+			"importance": 0.25,
+			"synonyms": {
+				"en": [ "joke" ],
+				"nl": [ "grap", "grapje", "mop", "mopje" ]
+			}
 		}
-	}
+	]
 }

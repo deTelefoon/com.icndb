@@ -11,14 +11,12 @@ App.prototype.init = function(){
 	
 	Homey.manager('speech-input').on('speech', function(speech){
 		
-		require('request').get('http://api.icndb.com/jokes/random', function(err, result, body){
+		require('request').get({
+			url: 'http://api.icndb.com/jokes/random',
+			json: true
+		}, function(err, result, body){
 			if( err ) return false;
-
-			var joke = body.replace(/\\'/g, "'");
-				joke = JSON.parse(joke);
-				joke = joke.value.joke;
-
-			Homey.say( joke );
+			Homey.manager('speech-output').say( body.value.joke );
 		});
 		
 	});
