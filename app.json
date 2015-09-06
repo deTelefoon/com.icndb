@@ -2,7 +2,7 @@
 	"id": "com.icndb.api",
 	"version": "1.0.0",
 	"compatibility": "0.x || 1.x",
-	"category": "services",
+	"category": "internet",
 	"name": {
 		"en": "Chuck Norris jokes"
 	},
