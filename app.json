@@ -2,11 +2,16 @@
 	"id": "com.icndb.api",
 	"version": "1.0.0",
 	"compatibility": "0.x || 1.x",
+	"category": "services",
 	"name": {
 		"en": "Chuck Norris jokes"
 	},
 	"description": {
 		"en": "Tells you a Chuck Norris joke when you're feeling down"
+	},
+	"images": {
+		"large": "./assets/images/large.jpg",
+		"small": "./assets/images/small.jpg"
 	},
 	"author": {
 		"name": "Emile Nijssen",
@@ -22,21 +27,21 @@
 		{
 			"id": "chuck",
 			"importance": 0.5,
-			"synonyms": {
+			"triggers": {
 				"en": [ "chuck" ]
 			}
 		},
 		{
 			"id": "norris",
 			"importance": 0.5,
-			"synonyms": {
+			"triggers": {
 				"en": [ "norris" ]
 			}
 		},
 		{
 			"id": "joke",
 			"importance": 0.25,
-			"synonyms": {
+			"triggers": {
 				"en": [ "joke" ],
 				"nl": [ "grap", "grapje", "mop", "mopje" ]
 			}
