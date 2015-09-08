@@ -1,4 +1,6 @@
 "use strict";
+
+var http = require('http');
   
 var self = module.exports = {
 	
@@ -6,12 +8,22 @@ var self = module.exports = {
 	
 		Homey.manager('speech-input').on('speech', function(speech){
 						
-			require('request').get({
-				url: 'http://api.icndb.com/jokes/random',
-				json: true
-			}, function(err, result, body){
-				if( err ) return Homey.manager('speech-output').say( __('internet_error') );
-				Homey.manager('speech-output').say( body.value.joke );
+			http.get('http://api.icndb.com/jokes/random', function(res){
+	
+				var body = '';
+				
+				res
+					.on('data', function(chunk) {
+						body += chunk;
+					})
+					.on('end', function() {
+						body = JSON.parse(body);
+						Homey.manager('speech-output').say( body.value.joke );
+					});
+					
+			}).on('error', function(e) {
+				console.log("Got error: " + e.message);
+				Homey.manager('speech-output').say( __('internet_error') );
 			});
 			
 		});
