@@ -1,6 +1,6 @@
 {
 	"id": "com.icndb.api",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"compatibility": "0.x || 1.x",
 	"category": "internet",
 	"name": {
@@ -16,6 +16,15 @@
 	"author": {
 		"name": "Emile Nijssen",
 		"website": "http://www.emilenijssen.nl"
+	},
+	"contributors": {
+		"developers": [
+			{
+				"name": "Dennie de Groot",
+				"email": "mail@denniedegroot.nl",
+				"website": "https://denniedegroot.nl"
+			}
+		]
 	},
 	"dependencies": {
 		"request": "*"
@@ -46,5 +55,16 @@
 				"nl": [ "grap", "grapje", "mop", "mopje" ]
 			}
 		}
-	]
+	],
+	"flow": {
+		"actions": [
+			{
+				"id": "joke",
+				"title": {
+					"en": "Tell Chuck Norris joke",
+					"nl": "Vertel een Chuck Norris grap"
+				}
+			}
+		]
+	}
 }
