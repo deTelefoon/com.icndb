@@ -4,28 +4,20 @@
 	"compatibility": "0.x || 1.x",
 	"category": "internet",
 	"name": {
-		"en": "Chuck Norris jokes"
+		"en": "GlaDos Lines"
 	},
 	"description": {
-		"en": "Tells you a Chuck Norris joke when you're feeling down"
+		"en": "Lets you feel as portal subject"
 	},
 	"images": {
 		"large": "./assets/images/large.jpg",
 		"small": "./assets/images/small.jpg"
 	},
 	"author": {
-		"name": "Emile Nijssen",
-		"website": "http://www.emilenijssen.nl"
+		"name": "Daan",
+		"website": "-"
 	},
-	"contributors": {
-		"developers": [
-			{
-				"name": "Dennie de Groot",
-				"email": "mail@denniedegroot.nl",
-				"website": "https://denniedegroot.nl"
-			}
-		]
-	},
+	
 	"dependencies": {
 		"request": "*"
 	},
@@ -34,35 +26,28 @@
 	],
 	"speech": [
 		{
-			"id": "chuck",
+			"id": "glados",
 			"importance": 0.5,
 			"triggers": {
-				"en": [ "chuck" ]
+				"en": [ "glados" ]
 			}
 		},
 		{
-			"id": "norris",
+			"id": "portal",
 			"importance": 0.5,
 			"triggers": {
-				"en": [ "norris" ]
+				"en": [ "portal" ]
 			}
 		},
-		{
-			"id": "joke",
-			"importance": 0.25,
-			"triggers": {
-				"en": [ "joke" ],
-				"nl": [ "grap", "grapje", "mop", "mopje" ]
-			}
-		}
+	
 	],
 	"flow": {
 		"actions": [
 			{
-				"id": "joke",
+				"id": "glados1",
 				"title": {
-					"en": "Tell Chuck Norris joke",
-					"nl": "Vertel een Chuck Norris grap"
+					"en": "Speak as GlaDos",
+					"nl": "Spreek als GlaDos"
 				}
 			}
 		]
